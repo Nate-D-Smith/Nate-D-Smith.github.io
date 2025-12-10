@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahel Terrorism Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/mali">Mali</a>
+        <a href="/niger">Niger</a>
+        <a href="/burkina">Burkina Faso</a>
+        <a href="/groups">Militant Groups</a>
+        <a href="/methods">Methods</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Sahel Terrorism Data Analytics</h1>
+        <p>Data-driven insights into violent extremism in Mali, Niger, and Burkina Faso.</p>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="container">
+        <h2 class="section-title">About This Project</h2>
+        <p>
+            This website provides analytical insights into terrorism activity across the central Sahel,
+            using data from the Global Terrorism Database (GTD). 
+            Explore interactive charts, timelines, casualty trends, and group activity breakdowns
+            for Mali, Niger, and Burkina Faso.
+        </p>
+    </div>
+
+    <!-- Countries Section -->
+    <div class="container">
+        <h2 class="section-title">Explore by Country</h2>
+        <div class="country-cards">
+            
+            <div class="card">
+                <h3>Mali</h3>
+                <p>Casualty trends, major regions, and militant group activity.</p>
+                <a href="/mali">View Mali →</a>
+            </div>
+
+            <div class="card">
+                <h3>Niger</h3>
+                <p>Cross-border activity, ISGS expansion, and attack patterns.</p>
+                <a href="/niger">View Niger →</a>
+            </div>
+
+            <div class="card">
+                <h3>Burkina Faso</h3>
+                <p>Rapid escalation of violence, hotspots, and regional shifts.</p>
+                <a href="/burkina">View Burkina Faso →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Featured Visual -->
+    <div class="container">
+        <h2 class="section-title">Featured Visualization</h2>
+
+        <img src="{{ url_for('static', filename='images/kills_by_country.png') }}" 
+             alt="Total killings per year" width="100%" 
+             style="border-radius: 8px; border: 1px solid #ccc;">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Sahel Terrorism Analytics Project — Created by Nate
+    </footer>
+
+</body>
+</html>

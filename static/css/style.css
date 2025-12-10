@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        linear-gradient(rgba(244, 231, 211, 0.96), rgba(244,231,211,0.96)),
+        url('../../static/images/topography.svg');
+    background-repeat: repeat;
+    background-size: 750px;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 6px 5%;
+    box-sizing: border-box;
+    border-bottom: 6px solid #a3493c;
+}
+
+.logo a{
+    color: #a3493c;
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-left: 25%;
+    margin-right: 8%;
+}
+
+.nav-links > li > a {
+    color: #F4E7D3;
+    text-decoration: none;
+    padding: 8px 4px;
+    font-size: 26px;
+}
+
+.nav-links > li > a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #F4E7D3;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0px;
+    min-width: 160px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+/* for group pages */
+.group-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 24px 8%;
+}
+
+.group-page-content {
+  flex: 1;
+  background: rgba(0,0,0,0.03);
+  padding: 24px 28px;
+  border-radius: 6px;
+  border-left: 3px solid #a3493c;
+}
+
+
+
+
+/* for country pages*/
+.country-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 24px 8%;
+}
+
+.sidebar {
+  width: 230px;
+  background: rgba(0,0,0,0.03);
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 3px solid #a3493c;
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li + li {
+  margin-top: 6px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.country-page-content {
+  flex: 1;
+  background: rgba(0,0,0,0.03);
+  padding: 24px 28px;
+  border-radius: 6px;
+  border-left: 3px solid #a3493c;
+}
