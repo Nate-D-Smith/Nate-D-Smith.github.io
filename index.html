@@ -5,106 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="statics/js/load-navbar.js" defer></script>
   </head>
 
-<body>
-    <div id="navbar-container"></div>
-    <main class="page-container">
-        <header class="page-title">
-            <h1>The Sahel</h1>
-            <p>A region at the crossroads of climate, conflict, and culture.</p>
-        </header>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">Terrorism In The Sahel</a>
+      </div>
 
-        <section class="cards-grid">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
 
-            <!-- CARD 1: Introduction to the Sahel -->
-            <article class="card">
-                <h2>Introduction to the Sahel</h2>
-                <p>
-                    The Sahel is a broad band of land where the Sahara meets the savannah,
-                    stretching from Senegal in the west to Sudan in the east. It is home to
-                    traders, herders, farmers, and cities that sit on old caravan routes.
-                </p>
-                <p>
-                    Today, the region faces overlapping pressures: climate stress, political
-                    instability, armed groups, and humanitarian crises. Understanding the Sahel
-                    means understanding how all of these forces interact across borders.
-                </p>
-                <a href="about_sahel.html" class="card-footer-link">Read more about the Sahel →</a>
-            </article>
+        <li class="dropdown">
+          <a href="#">Groups</a>
+          <ul class="dropdown-menu">
+            <li><a href="templates/groups/jnim.html">JNIM</a></li>
+            <li><a href="templates/groups/issp.html">ISSP</a></li>
+            <li><a href="templates/groups/boko_haram.html">Boko Haram</a></li>
+          </ul>
+        </li>
 
-            <!-- CARD 2: Militant Groups -->
-            <article class="card">
-                <h2>Militant Groups in the Sahel</h2>
-                <p>
-                    Several armed groups operate across Mali, Burkina Faso, Niger, and the wider
-                    Sahel. They differ in their ideology, organization, and areas of operation.
-                </p>
-                <ul>
-                    <li><strong>JNIM</strong> – Al-Qaeda–aligned umbrella group active across Mali, Burkina Faso, and parts of Niger.</li>
-                    <li><strong>ISSP</strong> – Islamic State Sahel Province, operating mainly in the tri-border area around eastern Mali and western Niger.</li>
-                    <li><strong>Ansaru & others</strong> – Smaller factions with roots in Nigeria and local networks.</li>
-                </ul>
-                <p class="hint">Each profile explains origins, leadership, ideology, and main regions of activity.</p>
-                <a href="groups.html" class="card-footer-link">View all militant group profiles →</a><br>
-                <a href="groups/jnim.html">JNIM profile</a> ·
-                <a href="groups/issp.html">ISSP profile</a> ·
-                <a href="groups/ansaru.html">Ansaru profile</a>
-            </article>
+        <li class="dropdown">
+          <a href="#">Countries</a>
+          <ul class="dropdown-menu">
+            <li><a href="templates/countries/mali.html">Mali</a></li>
+            <li><a href="templates/countries/burkina_faso.html">Burkina Faso</a></li>
+            <li><a href="templates/countries/niger.html">Niger</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-            <!-- CARD 3: Countries -->
-            <article class="card">
-                <h2>Countries in Focus</h2>
-                <p>
-                    The Sahel spans multiple states, and each country experiences the crisis in
-                    a different way. Some are at the center of current violence; others are more
-                    exposed to spillover and cross-border movements.
-                </p>
-                <ul>
-                    <li><a href="countries/mali.html"><strong>Mali</strong></a> – Epicenter of jihadist insurgency and repeated political crises.</li>
-                    <li><a href="countries/burkina_faso.html"><strong>Burkina Faso</strong></a> – Rapidly expanding militant presence and rural displacement.</li>
-                    <li><a href="countries/niger.html"><strong>Niger</strong></a> – Tri-border frontline and key transit hub.</li>
-                    <li><a href="countries/chad.html"><strong>Chad</strong></a> – Regional military actor connected to wider Sahel dynamics.</li>
-                    <li><a href="countries/mauritania.html"><strong>Mauritania</strong></a> – Important political and security partner in the region.</li>
-                </ul>
-                <a href="countries/index.html" class="card-footer-link">Browse all country pages →</a>
-            </article>
+    <div class="group-layout">
+    <div class="group-page-content">
+      <h1>Home Page</h1>
+      <h2>Introduction and foundation</h2>
+      <p>is a Salafi Jihadist militant organisation operating in the Sahel 
+        region of sub-Saharan Africa. It was created in 2017 as a merger of 
+        4 salafi-jihadist organizations in the sahel (including AQIM) and has 
+        since opperated as a sub-group of al-Qaeda.</p> 
 
-            <!-- CARD 4: Regions & Frontlines -->
-            <article class="card">
-                <h2>Key Regions & Frontlines</h2>
-                <p>
-                    Conflict is concentrated in specific corridors and borderlands rather than
-                    evenly spread across the map. These zones often cross state boundaries.
-                </p>
-                <ul>
-                    <li><a href="regions/liptako_gourma.html"><strong>Liptako–Gourma</strong></a> – The tri-border area where JNIM and ISSP are most active.</li>
-                    <li><a href="regions/central_mali.html"><strong>Central Mali</strong></a> – Mopti and Ségou regions, shaped by jihadist influence and communal violence.</li>
-                    <li><a href="regions/northern_burkina.html"><strong>Northern Burkina Faso</strong></a> – Rural zones with shrinking state presence.</li>
-                    <li><a href="regions/western_niger.html"><strong>Western Niger</strong></a> – Tillabéri region, targeted by ISSP attacks.</li>
-                    <li><a href="regions/coastal_spillover.html"><strong>Coastal Spillover</strong></a> – Northern Benin, Togo, and Côte d’Ivoire.</li>
-                </ul>
-                <a href="regions/index.html" class="card-footer-link">See all regional overviews →</a>
-            </article>
-
-            <!-- CARD 5: Resources / Other Stuff -->
-            <article class="card">
-                <h2>Maps, Glossary & Resources</h2>
-                <p>
-                    This section gathers tools to help make the Sahel’s complexity easier to
-                    follow: clear definitions, visual aids, and links to further reading.
-                </p>
-                <ul>
-                    <li><a href="resources/maps.html"><strong>Maps</strong></a> – Conflict hotspots, areas of control, and cross-border corridors.</li>
-                    <li><a href="resources/glossary.html"><strong>Glossary</strong></a> – Short explanations of key terms, actors, and acronyms.</li>
-                    <li><a href="podcast.html"><strong>Sahel Stories Podcast</strong></a> – Narrative episodes that introduce the region, groups, and events.</li>
-                    <li><a href="resources/reading.html"><strong>Further Reading</strong></a> – Reports, datasets, and external sources.</li>
-                </ul>
-                <p class="hint">Use these pages as a starting point if you are new to the topic or doing research.</p>
-            </article>
-
-        </section>
-    </main>
-</body>
+      <p>The ranks of JNIM total 6,000 troops mainly from the Tuareg and Fulani 
+        ethnic groups in Mali. It operates in both Arabic and French but curent 
+        leaders prefer Arabic. The curent leader and founder of JNIM is Iyad Ag 
+        Ghaly, a Tuareg militant who has fought in various rebellions since the 
+        1980s. He was the founder and leader of the former militant group Ansar 
+        Dine and became the leader of JNIM upon it's creation.</p>
+    </div>
+    </div>
+  </body>
 </html>
