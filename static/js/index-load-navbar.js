@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("navbar-container");
   if (!container) return;
 
-  fetch("navbar.html")   // same folder as index.html
+  fetch("index-navbar.html")   // same folder as index.html
     .then(response => {
       if (!response.ok) {
         throw new Error("HTTP " + response.status);
