@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("navbar-container");
 
-  // Detect if we're on GitHub Pages
-  const pathParts = window.location.pathname.split("/");
-
-
-  //
-  // pathParts = ["", "repo", "templates", "groups", "jnim.html"]
-
-  const repoName = pathParts[1];  // <-- your repo folder name on GitHub Pages
+  // Split the path to detect repo-based or root-based GitHub Pages
+  const pathParts = window.location.pathname.split("/").filter(p => p.length > 0);
 
   let navbarPath;
 
   if (window.location.hostname === "localhost" || window.location.protocol === "file:") {
     // Local development
     navbarPath = "../../navbar.html";
-  } else {
-    // GitHub Pages (must include repo name!)
+
+  } else if (pathParts.length > 1) {
+    // Repo-based GitHub Pages:  username.github.io/repoName/...
+    const repoName = pathParts[0];
     navbarPath = `/${repoName}/navbar.html`;
+
+  } else {
+    // User-level GitHub Pages: username.github.io/...
+    navbarPath = `/navbar.html`;
   }
 
   fetch(navbarPath)
@@ -27,4 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Navbar load error:", err));
 });
-
