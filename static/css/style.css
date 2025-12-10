@@ -165,3 +165,44 @@ p {
   border-radius: 6px;
   border-left: 3px solid #a3493c;
 }
+
+
+.site-footer {
+  background: black;
+  color: #F4E7D3;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 6px solid #a3493c;
+}
+
+.site-footer a {
+  color: #a3493c;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin: 6px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
