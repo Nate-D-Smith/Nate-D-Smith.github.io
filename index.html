@@ -5,90 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/load-navbar.js" defer></script>
+    <script src="statics/js/load-navbar.js" defer></script>
   </head>
 
 <body>
-   
     <div id="navbar-container"></div>
-    <div class="country-layout">
-    <aside class="sidebar">
-    <h2>Mali Regions</h2>
-    <ul>
-      <li><a href="../regions/bamako_mali.html">Bamako</a></li>
-      <li><a href="bandiagara_mali.html">Bandiagara</a></li>
-      <li><a href="bougouni_mali.html">Bougouni</a></li>
-      <li><a href="dioila_mali.html">Dioila</a></li>
-      <li><a href="douentza_mali.html">Douentza</a></li>
-      <li><a href="gao_mali.html">Gao</a></li>
-      <li><a href="kayes_mali.html">Kayes</a></li>
-      <li><a href="kidal_mali.html">Kidal</a></li>
-      <li><a href="kita_mali.html">Kita</a></li>
-      <li><a href="koulikoro_mali.html">Koulikoro</a></li>
-      <li><a href="koutiala_mali.html">Koutiala</a></li>
-      <li><a href="menaka_mali.html">Menaka</a></li>
-      <li><a href="mopti_mali.html">Mopti</a></li>
-      <li><a href="nara_mali.html">Nara</a></li>
-      <li><a href="nioro_mali.html">Nioro</a></li>
-      <li><a href="san_mali.html">San</a></li>
-      <li><a href="segou_mali.html">Segou</a></li>
-      <li><a href="sikasso_mali.html">Sikasso</a></li>
-      <li><a href="taoudenit_mali.html">Taoudenit</a></li>
-      <li><a href="tombouctou_mali.html">Tombouctou</a></li>
-    </ul>
-  </aside>
+    <main class="page-container">
+        <header class="page-title">
+            <h1>The Sahel</h1>
+            <p>A region at the crossroads of climate, conflict, and culture.</p>
+        </header>
 
+        <section class="cards-grid">
 
+            <!-- CARD 1: Introduction to the Sahel -->
+            <article class="card">
+                <h2>Introduction to the Sahel</h2>
+                <p>
+                    The Sahel is a broad band of land where the Sahara meets the savannah,
+                    stretching from Senegal in the west to Sudan in the east. It is home to
+                    traders, herders, farmers, and cities that sit on old caravan routes.
+                </p>
+                <p>
+                    Today, the region faces overlapping pressures: climate stress, political
+                    instability, armed groups, and humanitarian crises. Understanding the Sahel
+                    means understanding how all of these forces interact across borders.
+                </p>
+                <a href="about_sahel.html" class="card-footer-link">Read more about the Sahel →</a>
+            </article>
 
-    <div class="country-page-content">
-      <h1>Mali</h1>
-      <h2>Introduction</h2>
-      <p>Mali is a country in the Sahel that has thousands of years 
-        of legendary history ranging from the conquests of the Mali 
-        empire to the conquests of Islam and from the glorious reign 
-        of history's richest man Mansa Musa to the oppressive reign of 
-        post colonial military juntas. Over it's history, Mali has
-        served as a melting pot of ethnic groups, religions, languages, 
-        philosophies, and ideologies. The combination of these things 
-        has created one of the most interesting and chaotic cultures
-        of our day.</p>
+            <!-- CARD 2: Militant Groups -->
+            <article class="card">
+                <h2>Militant Groups in the Sahel</h2>
+                <p>
+                    Several armed groups operate across Mali, Burkina Faso, Niger, and the wider
+                    Sahel. They differ in their ideology, organization, and areas of operation.
+                </p>
+                <ul>
+                    <li><strong>JNIM</strong> – Al-Qaeda–aligned umbrella group active across Mali, Burkina Faso, and parts of Niger.</li>
+                    <li><strong>ISSP</strong> – Islamic State Sahel Province, operating mainly in the tri-border area around eastern Mali and western Niger.</li>
+                    <li><strong>Ansaru & others</strong> – Smaller factions with roots in Nigeria and local networks.</li>
+                </ul>
+                <p class="hint">Each profile explains origins, leadership, ideology, and main regions of activity.</p>
+                <a href="groups.html" class="card-footer-link">View all militant group profiles →</a><br>
+                <a href="groups/jnim.html">JNIM profile</a> ·
+                <a href="groups/issp.html">ISSP profile</a> ·
+                <a href="groups/ansaru.html">Ansaru profile</a>
+            </article>
 
-      <p>Mali has been at the heart of the Sahel's security crisis 
-        for more than a decade. What began as a local rebellion in 
-        2012 has evolved into a complex conflict involving jihadist 
-        groups, ethnic militias, international forces, and state 
-        actors. Today, Mali is the most active theater of jihadist 
-        violence in the Sahel and the birthplace of several groups 
-        that now operate across West Africa.</p>
+            <!-- CARD 3: Countries -->
+            <article class="card">
+                <h2>Countries in Focus</h2>
+                <p>
+                    The Sahel spans multiple states, and each country experiences the crisis in
+                    a different way. Some are at the center of current violence; others are more
+                    exposed to spillover and cross-border movements.
+                </p>
+                <ul>
+                    <li><a href="countries/mali.html"><strong>Mali</strong></a> – Epicenter of jihadist insurgency and repeated political crises.</li>
+                    <li><a href="countries/burkina_faso.html"><strong>Burkina Faso</strong></a> – Rapidly expanding militant presence and rural displacement.</li>
+                    <li><a href="countries/niger.html"><strong>Niger</strong></a> – Tri-border frontline and key transit hub.</li>
+                    <li><a href="countries/chad.html"><strong>Chad</strong></a> – Regional military actor connected to wider Sahel dynamics.</li>
+                    <li><a href="countries/mauritania.html"><strong>Mauritania</strong></a> – Important political and security partner in the region.</li>
+                </ul>
+                <a href="countries/index.html" class="card-footer-link">Browse all country pages →</a>
+            </article>
 
-      <h2>Militant Groups and Violence</h2>
+            <!-- CARD 4: Regions & Frontlines -->
+            <article class="card">
+                <h2>Key Regions & Frontlines</h2>
+                <p>
+                    Conflict is concentrated in specific corridors and borderlands rather than
+                    evenly spread across the map. These zones often cross state boundaries.
+                </p>
+                <ul>
+                    <li><a href="regions/liptako_gourma.html"><strong>Liptako–Gourma</strong></a> – The tri-border area where JNIM and ISSP are most active.</li>
+                    <li><a href="regions/central_mali.html"><strong>Central Mali</strong></a> – Mopti and Ségou regions, shaped by jihadist influence and communal violence.</li>
+                    <li><a href="regions/northern_burkina.html"><strong>Northern Burkina Faso</strong></a> – Rural zones with shrinking state presence.</li>
+                    <li><a href="regions/western_niger.html"><strong>Western Niger</strong></a> – Tillabéri region, targeted by ISSP attacks.</li>
+                    <li><a href="regions/coastal_spillover.html"><strong>Coastal Spillover</strong></a> – Northern Benin, Togo, and Côte d’Ivoire.</li>
+                </ul>
+                <a href="regions/index.html" class="card-footer-link">See all regional overviews →</a>
+            </article>
 
-      <p>The primary among these is Jama'at Nasr al-Islam wal-Muslimin 
-        or JNIM which is a Jihadist militant group born out of the 
-        Northern Tuareg rebellions and currently allied with al-Qaeda. It has ravaged the 
-        Northern regions of Mali since 2017 with bombings, executions,
-        theft, and armed raids. In spite of this violence JNIM has 
-        earned the respect and loyalty of many groups in Mali's border
-        regions, especially among ethnic Turareg and Fulani tribes 
-        who have been historically oppressed by the state. It
-        concentrates most of it's attacks on state government and 
-        military assets in order to delegitimize the state. JNIM also 
-        has conducted hundreds of attacks against the Islamic State
-        Sahel Province (ISSP) with whom it competes for control of 
-        the tri-border region of Mali, Niger, and Burkina Faso. 
-        Mali civialians often get caught up in the crossfire as groups
-        frequently massacre villages who are seen as friendly to the 
-        ennemy.</p>
+            <!-- CARD 5: Resources / Other Stuff -->
+            <article class="card">
+                <h2>Maps, Glossary & Resources</h2>
+                <p>
+                    This section gathers tools to help make the Sahel’s complexity easier to
+                    follow: clear definitions, visual aids, and links to further reading.
+                </p>
+                <ul>
+                    <li><a href="resources/maps.html"><strong>Maps</strong></a> – Conflict hotspots, areas of control, and cross-border corridors.</li>
+                    <li><a href="resources/glossary.html"><strong>Glossary</strong></a> – Short explanations of key terms, actors, and acronyms.</li>
+                    <li><a href="podcast.html"><strong>Sahel Stories Podcast</strong></a> – Narrative episodes that introduce the region, groups, and events.</li>
+                    <li><a href="resources/reading.html"><strong>Further Reading</strong></a> – Reports, datasets, and external sources.</li>
+                </ul>
+                <p class="hint">Use these pages as a starting point if you are new to the topic or doing research.</p>
+            </article>
 
-      <p>Mali has long been riddled by violence. Mali was invaded and 
-        controled by France as part of Afrique Occidentale Francaise 
-        from 1893 until its independence in 1960. French colonial rule
-        involved harsh administration including forced labor, heavy
-        taxation, and forced military recruitment. Since independence
-        in 1960, there has been nonstop chaos due to totalitarian
-        regimes, ethnic cleansing, Islamic fundamentalism, and 
-        repeated coups. There
-      </p>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
