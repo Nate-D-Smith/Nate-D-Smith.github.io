@@ -206,3 +206,28 @@ body {
 main {
   flex: 1;
 }
+
+
+
+
+.chart {
+  margin: 18px 0;
+  padding: 14px 16px;
+  background: rgba(0,0,0,0.02);
+  border-left: 3px solid #b75447;
+  border-radius: 6px;
+}
+
+.chart img, .chart object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.chart figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.85;
+}
