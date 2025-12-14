@@ -219,7 +219,7 @@ main {
 }
 
 .chart img, .chart object {
-  max-width: 100%;
+  max-width: 15%;
   height: auto;
   display: block;
   margin: 0 auto;
