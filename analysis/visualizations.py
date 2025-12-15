@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotx as mpx
+import os
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -17,6 +18,9 @@ df['date'] = pd.to_datetime(df['date'], errors='coerce')
 df.shape
 list(df.columns)
 df.date.unique()[:20]
+
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
  # Total Killings per Year by Country
 sns.set_style('ticks')
@@ -60,10 +64,10 @@ plt.rcParams.update({
 
 # 3 month rolling average nkills graph for countries since 2000
 
-df_2000 = df[(df['date'] < '2020-03-01') & 
-             (df['date'] > '2000-01-01')]
+df_2005 = df[(df['date'] < '2020-03-01') & 
+             (df['date'] > '2005-01-01')]
 
-monthly = (df_2000.groupby([pd.Grouper(key='date', freq='MS'),
+monthly = (df_2005.groupby([pd.Grouper(key='date', freq='MS'),
                             'country'])['nkill']
                             .sum().reset_index())
 
@@ -74,20 +78,7 @@ monthly["deaths_3mo_avg"] = (
     .transform(lambda x: x.rolling(window=3, min_periods=1).mean())
 )
 
-plt.figure(figsize=(12, 6))
-
-sns.lineplot(
-    data=monthly,
-    x="date",
-    y="deaths_3mo_avg",
-    hue="country"
-)
-
-plt.title("3-Month Rolling Average of Conflict Deaths (2000–2020)")
-plt.xlabel("Year")
-plt.ylabel("Deaths (3-Month Rolling Avg)")
-plt.tight_layout()
-plt.show()
+# All countries
 
 fig, ax = plt.subplots(figsize=(10.5, 4.8))
 
@@ -100,21 +91,58 @@ sns.lineplot(
     ax=ax
 )
 
-ax.set_title("3-Month Rolling Average of Deaths (2000–2020)", pad=12)
+ax.set_title("3-Month Rolling Average of Deaths (2005–2020)", pad=12)
 ax.set_xlabel("")
 ax.set_ylabel("Deaths (3-mo avg)")
 
-ax.grid(True, axis="y")   # usually enough to keeps it clean
+ax.grid(True, axis="y")
 ax.grid(False, axis="x")
 
-# Clean spines to match  site’s minimalist boxes
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
 leg = ax.legend(title="", frameon=False, ncol=3, loc="upper left")
 
 fig.tight_layout()
+fig.savefig("jnim_3mo_avg.svg", bbox_inches="tight")
 plt.show()
 
-fig.savefig("jnim_3mo_avg.svg", bbox_inches="tight")
+# Bamako
 
+df_bamako = df.loc[
+    (df["date"] >= "2005-01-01") &
+    (df["date"] <  "2020-03-01") &
+    (df["province"] == "Bamako")
+].copy()
+
+monthly = (
+    df_bamako
+    .groupby(pd.Grouper(key="date", freq="MS"))["nkill"]
+    .sum()
+    .reset_index(name="nkill")
+)
+
+monthly["deaths_3mo_avg"] = monthly["nkill"].rolling(window=3, min_periods=1).mean()
+
+fig, ax = plt.subplots(figsize=(10.5, 4.8))
+
+sns.lineplot(
+    data=monthly,
+    x="date",
+    y="deaths_3mo_avg",
+    linewidth=2.5,
+    ax=ax
+)
+
+ax.set_title("Bamako — 3-Month Rolling Average of Deaths (2005–2020)", pad=12)
+ax.set_xlabel("")
+ax.set_ylabel("Deaths (3-mo avg)")
+
+ax.grid(True, axis="y")
+ax.grid(False, axis="x")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+
+fig.tight_layout()
+fig.savefig("static/images/charts/bamako_3mo_avg.svg", bbox_inches="tight")
+plt.show()
