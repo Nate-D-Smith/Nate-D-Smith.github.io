@@ -234,6 +234,7 @@ main {
 }
 
 
-.violence-intensity-index {
+#violence-intensity-index {
   color: #b75447;
+  font-weight: 300;
 }
