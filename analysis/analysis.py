@@ -88,3 +88,8 @@ scores = (
 scores.loc[scores['score'].idxmax()]
 
 print(scores)
+
+df.loc[(df['province'] == 'Bamako') &
+       (df['year'] >= 2015), 'nkill'].count()
+df.loc[(df['province'] == 'Bamako') &
+       (df['year'] >= 2015), 'nkill'].sum()

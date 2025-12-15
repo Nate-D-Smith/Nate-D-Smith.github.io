@@ -234,7 +234,14 @@ main {
 }
 
 
-#violence-intensity-index {
+#violence-exposure-index {
   color: #b75447;
+  font-weight: 300;
+  font-size: 0.65em;
+}
+
+.separator {
+  margin: 0 0.4em;
+  color: #888;
   font-weight: 300;
 }
