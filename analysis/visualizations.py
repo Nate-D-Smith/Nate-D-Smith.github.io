@@ -109,40 +109,81 @@ plt.show()
 
 # Bamako
 
-df_bamako = df.loc[
-    (df["date"] >= "2005-01-01") &
-    (df["date"] <  "2020-03-01") &
-    (df["province"] == "Bamako")
-].copy()
+def graph(province):
 
-monthly = (
-    df_bamako
-    .groupby(pd.Grouper(key="date", freq="MS"))["nkill"]
-    .sum()
-    .reset_index(name="nkill")
-)
+    df_province = df.loc[
+        (df["date"] >= "2005-01-01") &
+        (df["date"] <  "2020-03-01") &
+        (df["province"] == province)
+    ].copy()
 
-monthly["deaths_3mo_avg"] = monthly["nkill"].rolling(window=3, min_periods=1).mean()
+    monthly = (
+        df_province
+        .groupby(pd.Grouper(key="date", freq="MS"))["nkill"]
+        .sum()
+        .reset_index(name="nkill")
+    )
 
-fig, ax = plt.subplots(figsize=(10.5, 4.8))
+    monthly["deaths_3mo_avg"] = monthly["nkill"].rolling(window=3, min_periods=1).mean()
 
-sns.lineplot(
-    data=monthly,
-    x="date",
-    y="deaths_3mo_avg",
-    linewidth=2.5,
-    ax=ax
-)
+    fig, ax = plt.subplots(figsize=(10.5, 4.8))
 
-ax.set_title("Bamako — 3-Month Rolling Average of Deaths (2005–2020)", pad=12)
-ax.set_xlabel("")
-ax.set_ylabel("Deaths (3-mo avg)")
+    sns.lineplot(
+        data=monthly,
+        x="date",
+        y="deaths_3mo_avg",
+        linewidth=2.5,
+        ax=ax
+    )
 
-ax.grid(True, axis="y")
-ax.grid(False, axis="x")
-ax.spines["top"].set_visible(False)
-ax.spines["right"].set_visible(False)
+    ax.set_title(f"{province} — 3-Month Rolling Average of Deaths (2005–2020)", pad=12)
+    ax.set_xlabel("")
+    ax.set_ylabel("Deaths (3-mo avg)")
 
-fig.tight_layout()
-fig.savefig("static/images/charts/bamako_3mo_avg.svg", bbox_inches="tight")
-plt.show()
+    ax.grid(True, axis="y")
+    ax.grid(False, axis="x")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    fig.tight_layout()
+    fig.savefig(f"static/images/charts/{province.lower()}_3mo_avg.svg", bbox_inches="tight")
+    plt.show()
+
+list(df.loc[df['country'] == 'Mali', 'province'].unique())
+
+
+graph('Centre')
+graph('Tahoua')
+graph('Zinder')
+graph('Gao')
+graph('Unknown')
+graph('Agadez')
+graph('Niamey')
+graph('Timbuktu')
+graph('Mopti')
+graph('Tillaberi')
+graph('Iferouane')
+graph('Maradi')
+graph('Dosso')
+graph('Bamako')
+graph('Diffa')
+graph('Kidal')
+graph('Tanout Department')
+graph('Agadez Department')
+graph('Niamey Capital District')
+graph('Segou')
+graph('Tillabéri')
+graph('Kayes')
+graph('Sahel')
+graph('Sikasso')
+graph('Koulikoro')
+graph('Centre-Nord')
+graph('Haut-Bassins')
+graph('Menaka')
+graph('Boucle du Mouhoun')
+graph('Nord')
+graph('Est')
+graph('Centre-Est')
+graph('Sud-Ouest')
+graph('Cascades')
+graph('Centre-Sud')
