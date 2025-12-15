@@ -236,9 +236,11 @@ main {
 
 #violence-exposure-index {
   color: #b75447;
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 2px;
 }
+
 
 .separator {
   margin: 0 0.4em;
