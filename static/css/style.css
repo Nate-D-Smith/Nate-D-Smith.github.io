@@ -245,3 +245,6 @@ main {
   color: #888;
   font-weight: 300;
 }
+
+
+body { outline: 5px solid red; }
