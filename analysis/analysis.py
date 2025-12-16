@@ -70,7 +70,7 @@ def danger_score(province_choice):
 
     return score
 
-danger_score('Gao')
+danger_score('Timbuktu')
 
 provinces = (
     df['province']
@@ -89,7 +89,7 @@ scores.loc[scores['score'].idxmax()]
 
 print(scores)
 
-df.loc[(df['province'] == 'Bamako') &
+df.loc[(df['province'] == 'Timbuktu') &
        (df['year'] >= 2015), 'nkill'].count()
-df.loc[(df['province'] == 'Bamako') &
+df.loc[(df['province'] == 'Timbuktu') &
        (df['year'] >= 2015), 'nkill'].sum()
